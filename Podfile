@@ -6,6 +6,6 @@ target 'CheckingIDnowSDK' do
   use_frameworks!
 
   # Pods for CheckingIDnowSDK
-	pod 'IDnowSDK'
+	pod 'IDnowSDK', '~> 3.21.0'
 
 end
