@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        textField.text = "TST-AGQQY"
     }
     
     
@@ -25,9 +26,15 @@ class ViewController: UIViewController {
         guard textField.hasText, let text = textField.text else {
             return
         }
-        let settings = IDnowSettings()
-        settings.ignoreCompanyID = true
-        settings.transactionToken = text
+//        let settings = IDnowSettings()
+//        settings.ignoreCompanyID = true
+//        settings.transactionToken = text
+        let settings = IDnowSettings(companyID: "adac", transactionToken: text)
+        settings.environment = IDnowEnvironment.test
+        settings.showErrorSuccessScreen = true
+        settings.showVideoOverviewCheck = true
+        settings.ignoreCompanyID = false
+        
         idnController = IDnowController(settings: settings)
         idnController.delegate = self
         idnController.initialize()

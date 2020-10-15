@@ -3,9 +3,10 @@
 
 target 'CheckingIDnowSDK' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  use_frameworks! :linkage => :static
+
 
   # Pods for CheckingIDnowSDK
-	pod 'IDnowSDK', '4.2.3'
+	pod 'IDnowSDK', '4.3.3'
 
 end
