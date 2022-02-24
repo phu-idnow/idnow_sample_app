@@ -7,6 +7,7 @@ target 'CheckingIDnowSDK' do
 
 
   # Pods for CheckingIDnowSDK
-	pod 'IDnowSDK', '4.3.3'
+  pod 'IDnowSDK', '5.1.6'
+	#pod 'IDnowSDK', :git => 'https://github.com/idnow/de.idnow.ios.git', :branch => 'v5.1.0-rc.1'
 
 end

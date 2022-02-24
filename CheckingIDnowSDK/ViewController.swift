@@ -8,16 +8,18 @@
 
 import UIKit
 import IDnowSDK
+import idnow_eid
+import AuthadaAuthenticationLibrary
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
-    
+    private var eIDRouter: IDN_eIDRouter!
     private var idnController: IDnowController!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        textField.text = "TST-AGQQY"
+        textField.text = "TST-VWGYP"
     }
     
     
@@ -26,27 +28,39 @@ class ViewController: UIViewController {
         guard textField.hasText, let text = textField.text else {
             return
         }
-//        let settings = IDnowSettings()
-//        settings.ignoreCompanyID = true
-//        settings.transactionToken = text
-        let settings = IDnowSettings(companyID: "adac", transactionToken: text)
-        settings.environment = IDnowEnvironment.test
-        settings.showErrorSuccessScreen = true
-        settings.showVideoOverviewCheck = true
-        settings.ignoreCompanyID = false
+        let settings = IDnowSettings()
+        settings.ignoreCompanyID = true
+        settings.transactionToken = text
+//        let settings = IDnowSettings(companyID: "adac", transactionToken: text)
+//        settings.environment = IDnowEnvironment.test
+//        settings.showErrorSuccessScreen = true
+//        settings.showVideoOverviewCheck = true
+//        settings.ignoreCompanyID = false
         
         idnController = IDnowController(settings: settings)
         idnController.delegate = self
-        idnController.initialize()
+//        idnController.initialize()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        idnController.initialize(completionBlock: {(success, error, canceledByUser) in
+            if success {
+                
+                self.eIDRouter = IDN_eIDRouter(withControlller: self, token: self.textField.text ?? "") { supported, error in
+                    self.eIDRouter?.present({ success, continueVideoIdent, error in
+//                        if (continueVideoIdent) {
+//                            idnowController.startIdentification(from: self)
+//                        }
+                    })
+                }
+            }
+        })
     }
 }
 
 extension ViewController: IDnowControllerDelegate {
     func idnowControllerDidFinishInitializing(_ idnowController: IDnowController) {
-        print("\nidnowControllerDidFinishInitializing invoked")
-        idnowController.startIdentification(from: self)
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//        print("\nidnowControllerDidFinishInitializing invoked")
+//        idnowController.startIdentification(from: self)
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 
     func idnowController(_ idnowController: IDnowController, initializationDidFailWithError error: Error) {

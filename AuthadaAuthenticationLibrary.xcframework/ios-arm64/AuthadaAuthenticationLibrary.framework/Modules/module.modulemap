@@ -1,0 +1,6 @@
+framework module AuthadaAuthenticationLibrary {
+  umbrella header "AuthadaAuthenticationLibrary.h"
+
+  export *
+  module * { export * }
+}

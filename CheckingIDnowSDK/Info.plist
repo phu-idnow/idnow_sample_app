@@ -45,5 +45,8 @@
 	<string>for identification</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>for identification</string>
+    <key>NFCReaderUsageDescription</key>
+    <string>this app meed to read NFC with ID cards for identification</string>
+    
 </dict>
 </plist>

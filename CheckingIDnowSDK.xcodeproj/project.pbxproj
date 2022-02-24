@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,26 @@
 		5A07A40C237D2DA800FE8F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A07A40A237D2DA800FE8F05 /* LaunchScreen.storyboard */; };
 		5A07A413237D2EE400FE8F05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A07A403237D2DA600FE8F05 /* ViewController.swift */; };
 		6F51739CE821925E4C79291E /* Pods_CheckingIDnowSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BA3FE984DB2E0C5BC848A1 /* Pods_CheckingIDnowSDK.framework */; };
+		E9B3F69427C7AA5400E9FFB3 /* idnow_eid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3F69327C7AA5400E9FFB3 /* idnow_eid.framework */; platformFilter = ios; };
+		E9B3F69527C7AA5400E9FFB3 /* idnow_eid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3F69327C7AA5400E9FFB3 /* idnow_eid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E9B3F69827C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3F69727C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework */; };
+		E9B3F69927C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3F69727C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E9B3F69627C7AA5400E9FFB3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E9B3F69927C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework in Embed Frameworks */,
+				E9B3F69527C7AA5400E9FFB3 /* idnow_eid.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		24BA3FE984DB2E0C5BC848A1 /* Pods_CheckingIDnowSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckingIDnowSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +45,12 @@
 		5A07A408237D2DA800FE8F05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A07A40B237D2DA800FE8F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A07A40D237D2DA800FE8F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9B3F68727C66D5300E9FFB3 /* idnow_eid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = idnow_eid.framework; path = "../de.idnow.ios-base/idnow_eid/dist/idnow_eid.framework"; sourceTree = "<group>"; };
+		E9B3F68B27C78F8400E9FFB3 /* idnow_eid.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = idnow_eid.xcframework; path = ../../../Desktop/idnow_eid.xcframework; sourceTree = "<group>"; };
+		E9B3F68F27C79EBC00E9FFB3 /* idnow_eid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = idnow_eid.framework; path = "../../../Downloads/de.idnow.ios-master/idnow_eid.framework"; sourceTree = "<group>"; };
+		E9B3F69327C7AA5400E9FFB3 /* idnow_eid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = idnow_eid.framework; sourceTree = "<group>"; };
+		E9B3F69727C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AuthadaAuthenticationLibrary.xcframework; sourceTree = "<group>"; };
+		E9B3F69A27C7B92200E9FFB3 /* CheckingIDnowSDK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheckingIDnowSDK.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +59,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F51739CE821925E4C79291E /* Pods_CheckingIDnowSDK.framework in Frameworks */,
+				E9B3F69827C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework in Frameworks */,
+				E9B3F69427C7AA5400E9FFB3 /* idnow_eid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +79,11 @@
 		43ED9D119D9117ECF4D52EE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9B3F69727C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework */,
+				E9B3F68F27C79EBC00E9FFB3 /* idnow_eid.framework */,
+				E9B3F69327C7AA5400E9FFB3 /* idnow_eid.framework */,
+				E9B3F68B27C78F8400E9FFB3 /* idnow_eid.xcframework */,
+				E9B3F68727C66D5300E9FFB3 /* idnow_eid.framework */,
 				24BA3FE984DB2E0C5BC848A1 /* Pods_CheckingIDnowSDK.framework */,
 			);
 			name = Frameworks;
@@ -78,6 +110,7 @@
 		5A07A400237D2DA600FE8F05 /* CheckingIDnowSDK */ = {
 			isa = PBXGroup;
 			children = (
+				E9B3F69A27C7B92200E9FFB3 /* CheckingIDnowSDK.entitlements */,
 				5A07A401237D2DA600FE8F05 /* AppDelegate.swift */,
 				5A07A403237D2DA600FE8F05 /* ViewController.swift */,
 				5A07A405237D2DA600FE8F05 /* Main.storyboard */,
@@ -100,6 +133,7 @@
 				5A07A3FB237D2DA600FE8F05 /* Frameworks */,
 				5A07A3FC237D2DA600FE8F05 /* Resources */,
 				53AFC1CFBB04A9A031A4C50D /* [CP] Copy Pods Resources */,
+				E9B3F69627C7AA5400E9FFB3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,17 +385,30 @@
 			baseConfigurationReference = 3F53EE5CE9DEEE159D1A0285 /* Pods-CheckingIDnowSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CheckingIDnowSDK/CheckingIDnowSDK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LRTCB5WQ93;
+				DEVELOPMENT_TEAM = 4W3KTRTP73;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CheckingIDnowSDK",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CheckingIDnowSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CheckingIDnowSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.idnow.CheckingIDnowSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -370,17 +417,30 @@
 			baseConfigurationReference = 3C80AAA87B30FD752447F929 /* Pods-CheckingIDnowSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CheckingIDnowSDK/CheckingIDnowSDK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LRTCB5WQ93;
+				DEVELOPMENT_TEAM = 4W3KTRTP73;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CheckingIDnowSDK",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CheckingIDnowSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CheckingIDnowSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.idnow.CheckingIDnowSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
