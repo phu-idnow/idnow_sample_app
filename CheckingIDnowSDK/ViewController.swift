@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        textField.text = "TST-VWGYP"
+        textField.text = "DV1-KFEGF"
     }
     
     
@@ -44,11 +44,11 @@ class ViewController: UIViewController {
         idnController.initialize(completionBlock: {(success, error, canceledByUser) in
             if success {
                 
-                self.eIDRouter = IDN_eIDRouter(withControlller: self, token: self.textField.text ?? "") { supported, error in
-                    self.eIDRouter?.present({ success, continueVideoIdent, error in
-//                        if (continueVideoIdent) {
-//                            idnowController.startIdentification(from: self)
-//                        }
+                self.eIDRouter = IDN_eIDRouter(withController: self, token: self.textField.text ?? "") { supported, error in
+                    self.eIDRouter?.present({ [weak self] success, continueVideoIdent, error in
+                        if let strSelf = self, continueVideoIdent {
+                            self?.idnController.startIdentification(from: strSelf )
+                        }
                     })
                 }
             }

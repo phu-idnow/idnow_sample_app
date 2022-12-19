@@ -13,10 +13,11 @@
 		5A07A40C237D2DA800FE8F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A07A40A237D2DA800FE8F05 /* LaunchScreen.storyboard */; };
 		5A07A413237D2EE400FE8F05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A07A403237D2DA600FE8F05 /* ViewController.swift */; };
 		6F51739CE821925E4C79291E /* Pods_CheckingIDnowSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BA3FE984DB2E0C5BC848A1 /* Pods_CheckingIDnowSDK.framework */; };
-		E9B3F69427C7AA5400E9FFB3 /* idnow_eid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3F69327C7AA5400E9FFB3 /* idnow_eid.framework */; platformFilter = ios; };
-		E9B3F69527C7AA5400E9FFB3 /* idnow_eid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3F69327C7AA5400E9FFB3 /* idnow_eid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E9B3F69827C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3F69727C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework */; };
-		E9B3F69927C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3F69727C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E9CD56DD27C8ECAA00ED038F /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CD56DC27C8ECA900ED038F /* CoreNFC.framework */; };
+		E9DB069D2938D3EC003D9A1C /* idnow_eid.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB069B2938D3EB003D9A1C /* idnow_eid.xcframework */; };
+		E9DB069E2938D3EC003D9A1C /* idnow_eid.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB069B2938D3EB003D9A1C /* idnow_eid.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E9DB069F2938D3EC003D9A1C /* AuthadaAuthenticationLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB069C2938D3EB003D9A1C /* AuthadaAuthenticationLibrary.xcframework */; };
+		E9DB06A02938D3EC003D9A1C /* AuthadaAuthenticationLibrary.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB069C2938D3EB003D9A1C /* AuthadaAuthenticationLibrary.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +27,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E9B3F69927C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework in Embed Frameworks */,
-				E9B3F69527C7AA5400E9FFB3 /* idnow_eid.framework in Embed Frameworks */,
+				E9DB06A02938D3EC003D9A1C /* AuthadaAuthenticationLibrary.xcframework in Embed Frameworks */,
+				E9DB069E2938D3EC003D9A1C /* idnow_eid.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,12 +46,10 @@
 		5A07A408237D2DA800FE8F05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A07A40B237D2DA800FE8F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A07A40D237D2DA800FE8F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9B3F68727C66D5300E9FFB3 /* idnow_eid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = idnow_eid.framework; path = "../de.idnow.ios-base/idnow_eid/dist/idnow_eid.framework"; sourceTree = "<group>"; };
-		E9B3F68B27C78F8400E9FFB3 /* idnow_eid.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = idnow_eid.xcframework; path = ../../../Desktop/idnow_eid.xcframework; sourceTree = "<group>"; };
-		E9B3F68F27C79EBC00E9FFB3 /* idnow_eid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = idnow_eid.framework; path = "../../../Downloads/de.idnow.ios-master/idnow_eid.framework"; sourceTree = "<group>"; };
-		E9B3F69327C7AA5400E9FFB3 /* idnow_eid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = idnow_eid.framework; sourceTree = "<group>"; };
-		E9B3F69727C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AuthadaAuthenticationLibrary.xcframework; sourceTree = "<group>"; };
 		E9B3F69A27C7B92200E9FFB3 /* CheckingIDnowSDK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheckingIDnowSDK.entitlements; sourceTree = "<group>"; };
+		E9CD56DC27C8ECA900ED038F /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
+		E9DB069B2938D3EB003D9A1C /* idnow_eid.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = idnow_eid.xcframework; sourceTree = "<group>"; };
+		E9DB069C2938D3EB003D9A1C /* AuthadaAuthenticationLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AuthadaAuthenticationLibrary.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9DB069F2938D3EC003D9A1C /* AuthadaAuthenticationLibrary.xcframework in Frameworks */,
 				6F51739CE821925E4C79291E /* Pods_CheckingIDnowSDK.framework in Frameworks */,
-				E9B3F69827C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework in Frameworks */,
-				E9B3F69427C7AA5400E9FFB3 /* idnow_eid.framework in Frameworks */,
+				E9DB069D2938D3EC003D9A1C /* idnow_eid.xcframework in Frameworks */,
+				E9CD56DD27C8ECAA00ED038F /* CoreNFC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,11 +79,9 @@
 		43ED9D119D9117ECF4D52EE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E9B3F69727C7AB7E00E9FFB3 /* AuthadaAuthenticationLibrary.xcframework */,
-				E9B3F68F27C79EBC00E9FFB3 /* idnow_eid.framework */,
-				E9B3F69327C7AA5400E9FFB3 /* idnow_eid.framework */,
-				E9B3F68B27C78F8400E9FFB3 /* idnow_eid.xcframework */,
-				E9B3F68727C66D5300E9FFB3 /* idnow_eid.framework */,
+				E9DB069C2938D3EB003D9A1C /* AuthadaAuthenticationLibrary.xcframework */,
+				E9DB069B2938D3EB003D9A1C /* idnow_eid.xcframework */,
+				E9CD56DC27C8ECA900ED038F /* CoreNFC.framework */,
 				24BA3FE984DB2E0C5BC848A1 /* Pods_CheckingIDnowSDK.framework */,
 			);
 			name = Frameworks;
